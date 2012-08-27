@@ -69,12 +69,8 @@ function onGroupDetailsButton() {
 
 // Trigger a create or update of this group, then reselect the list
 function onGroupSaveButton() {
-    group.contentTypes = [];
-    
-    group.description = $("#start-date").val();
-    group.displayName = $("#end-date").val();
    
-    group.name = $("#group-name").val();
+    
     gadgets.log("onGroupSaveButton(creating=" + creating + ",group=" + JSON.stringify(group) + ")");
     if (creating) {
         osapi.jive.core.groups.create(

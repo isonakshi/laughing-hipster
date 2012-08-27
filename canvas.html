@@ -329,16 +329,7 @@ gadgets.util.registerOnLoadHandler(init);
 		});
 	};
 </script>
-<script type="text/javascript">
-	window.onload = function(){
-		new JsDatePick({
-			useMode:4,
-			target:"endDate",
-			dateFormat:"%d-%M-%Y"
-		
-		});
-	};
-</script>
+
 </head>
 
 <body>
@@ -346,24 +337,12 @@ gadgets.util.registerOnLoadHandler(init);
 <div id="wrapper">
 
     <div id="groups-div" class="top-level-div" style="display:none">
-        <h3>Social Groups</h3>
-        <table class="j-table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Group Type</th>
-                    <th>Members</th>
-                    <th>Followers</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody id="groups-tbody"></tbody>
-        </table>
+        
         <button id="group-add-button">Add</button>
     </div>
 
     <div id="group-div" class="top-level-div" style="display:none">
-        <h3 id="group-header"></h3>
+        <h3>AI Deal Room Creator</h3>
         <table class="j-table">
             <tr>
                 <th>Opportunity:</th>

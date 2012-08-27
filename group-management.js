@@ -70,7 +70,22 @@ function onGroupDetailsButton() {
 // Trigger a create or update of this group, then reselect the list
 function onGroupSaveButton() {
    
-    
+    creating=true;
+	
+	 group = {
+        contentTypes : [ 'blog', 'discussions', 'documents', 'projects' ],
+        creationDate : '',
+        creator : {
+            name : ''
+        },
+        description : '',
+        displayName : '',
+        groupType : 'OPEN',
+        id : '',
+        modificationDate : '',
+        name : '',
+        viewCount : ''
+    };
     gadgets.log("onGroupSaveButton(creating=" + creating + ",group=" + JSON.stringify(group) + ")");
     if (creating) {
         osapi.jive.core.groups.create(

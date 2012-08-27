@@ -116,9 +116,10 @@ function onGroupMembers() {
 }
 
 function onGroupSave() {
-    
+   
     group.displayName = $("#group-displayName").val();
-    
+   
+    group.name = $("#group-displayName").val();
     if (adding) {
         osapi.jive.corev3.groups.create(group).execute(onGroupAdded);
     }
@@ -274,7 +275,8 @@ function onMembersBack() {
 }
 
 function populateGroupDiv() {
-    
+    $("#group-displayName").val(group.name);
+   
     $("#group-displayName").val(group.displayName);
     
 }

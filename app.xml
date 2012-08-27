@@ -3,10 +3,10 @@
 <Module>
     <ModulePrefs title="Deal Room"
                 author="isonakshi"
-           description="Manage the social groups on this Jive instance">
+           description="Manage social groups">
         <Link rel="Icon" href="group-icon.png"/>
         <Require feature="dynamic-height"/>
-        <Require feature="jive-core-v2"/>
+        <Require feature="jive-core-v3"/>
         <Require feature="jquery-1.4.2"/>
         <Require feature="minimessage"/>
         <Require feature="osapi"/>

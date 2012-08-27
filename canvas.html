@@ -116,10 +116,9 @@ function onGroupMembers() {
 }
 
 function onGroupSave() {
-    group.description = $("#group-description").val();
+    
     group.displayName = $("#group-displayName").val();
-    group.groupType = $("#group-groupType").val();
-    group.name = $("#group-name").val();
+    
     if (adding) {
         osapi.jive.corev3.groups.create(group).execute(onGroupAdded);
     }
@@ -275,11 +274,9 @@ function onMembersBack() {
 }
 
 function populateGroupDiv() {
-    $("#group-name").val(group.name);
-    $("#group-description").val(group.description);
+    
     $("#group-displayName").val(group.displayName);
-    $("#group-members").html("").html("" + group.memberCount);
-    $("#group-followers").html("").html("" + group.followerCount);
+    
 }
 
 function populateMemberDiv() {

@@ -60,7 +60,7 @@ function loadMembers() {
 
 function onGroupAdd() {
     group = {
-        displayName : "",
+        
         followerCount : 0,
         groupType : "",
         memberCount : 0,
@@ -117,7 +117,7 @@ function onGroupMembers() {
 
 function onGroupSave() {
    
-    group.displayName = $("#group-displayName").val();
+ 
    
     group.name = $("#group-displayName").val();
     if (adding) {
@@ -277,7 +277,7 @@ function onMembersBack() {
 function populateGroupDiv() {
     $("#group-displayName").val(group.name);
    
-    $("#group-displayName").val(group.displayName);
+  
     
 }
 

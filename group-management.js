@@ -31,7 +31,7 @@ var viewer;
 
 // On-view-load initialization
 function init() {
-    $(".toplevel").hide();
+    $(".toplevel").show();
     registerHandlers();
     loadViewer();
     mini = new gadgets.MiniMessage();

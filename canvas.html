@@ -324,6 +324,15 @@ gadgets.util.registerOnLoadHandler(init);
 		new JsDatePick({
 			useMode:2,
 			target:"inputField",
+			dateFormat:"%d-%M-%Y"
+		
+		});
+	};
+</script>
+<script type="text/javascript">
+	window.onload = function(){
+		new JsDatePick({
+			useMode:2,
 			target:"endDate",
 			dateFormat:"%d-%M-%Y"
 		

@@ -1,75 +1,6 @@
-[Visual Basic]
-<%@ Page Language="VB" AutoEventWireup="true" %>
-<%@ Register TagPrefix="bdp" Namespace="BasicFrame.WebControls" Assembly="BasicFrame.WebControls.BasicDatePicker" %>
-<html>
- <head>
-    <title>Basic Date Picker SelectedDate Example</title>
-     <script runat="server">
-        Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-            If Not IsPostBack Then
-                ' Set SelectedDate to Today
-                this.BasicDatePicker1.SelectedDate = DateTime.Today
-            End If
-        End Sub
-        
-        Sub Selection_Change(sender As Object, e As EventArgs) 
-            Dim tempDate As DateTime
-            ' Check to see if DateTime object isNull (DateTime.MinValue).
-            If Not Me.BasicDatePicker1.IsNull Then
-                tempDate = Me.BasicDatePicker1.SelectedDate
-                tempDate = tempDate.AddDays(7)
-                Response.Write("One week from Today is " + tempDate.ToString("d-MMM-yyyy"))
-            Else 
-                Response.Write("Invalid Date")
-            End If
-        End Sub
-     </script>
- </head>
- <body>
-     <form runat="server">
-         <h3>Basic Date Picker SelectedDate Example</h3>
-         >bdp:BasicDatePicker 
-             ID="BasicDatePicker1" 
-             OnSelectionChanged="Selection_Change" 
-             AutoPostBack="true" 
-             runat="server"></bdp:BasicDatePicker>
-     </form>
- </body>
-</html>
-
-[C#]
-<%@ Page Language="C#" AutoEventWireup="true" %>
-<%@ Register TagPrefix="bdp" Namespace="BasicFrame.WebControls" Assembly="BasicFrame.WebControls.BasicDatePicker" %>
-<html>
- <head>
-    <title>Basic Date Picker SelectedDate Example</title>
-     <script runat="server">
-        void Page_Load(Object sender, EventArgs e)
-        {
-            // Set SelectedDate to Today
-            if (!IsPostBack)
-                this.BasicDatePicker1.SelectedDate = DateTime.Today;
-        }
-        
-        private void Selection_Change(object sender, EventArgs e)
-        {
-            DateTime tempDate;
-            // Check to see if DateTime object isNull (DateTime.MinValue).
-            if (!this.BasicDatePicker1.IsNull) // If it's not null, then create Text for Label.
-            {
-                tempDate = this.BasicDatePicker1.SelectedDate;
-                tempDate = tempDate.AddDays(7);
-                Response.Write("One week from Today is " + tempDate.ToString("d-MMM-yyyy"));
-            }
-            else
-            {
-                Response.Write("Invalid Date");
-            }
-        }    
-     </script>
 
 
-    
+<head>
 
     <link type="text/css" href="css/custom-theme/jquery-ui-1.8.16.custom.css" rel="stylesheet"/>
     <link type="text/css" href="css/custom-theme/jive-elements.css" rel="stylesheet"/>
@@ -387,14 +318,7 @@ gadgets.util.registerOnLoadHandler(init);
 </head>
 
 <body>
- <form runat="server">
-         <h3>Basic Date Picker SelectedDate Example</h3>
-         <bdp:BasicDatePicker 
-             ID="BasicDatePicker1" 
-             OnSelectionChanged="Selection_Change" 
-             AutoPostBack="true" 
-             runat="server"></bdp:BasicDatePicker>
-     </form>
+
 <div id="wrapper">
 
     <div id="groups-div" class="top-level-div" style="display:none">

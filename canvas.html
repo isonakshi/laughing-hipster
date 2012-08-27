@@ -60,7 +60,7 @@ function loadMembers() {
 
 function onGroupAdd() {
     group = {
-        
+        displayName : "",
         followerCount : 0,
         groupType : "",
         memberCount : 0,
@@ -117,7 +117,7 @@ function onGroupMembers() {
 
 function onGroupSave() {
    
- 
+    group.displayName = $(".group-displayName").val();
    
     group.name = $("#group-displayName").val();
     if (adding) {
@@ -277,7 +277,7 @@ function onMembersBack() {
 function populateGroupDiv() {
     $("#group-displayName").val(group.name);
    
-  
+    $(".group-displayName").val(group.displayName);
     
 }
 
@@ -346,7 +346,7 @@ gadgets.util.registerOnLoadHandler(init);
             <tr>
                 <th>Opportunity:</th>
                 <td>
-                    <input id="group-displayName" class="group-input" type="text" size=50/>
+                    <input id="group-displayName" class="group-displayName" type="text" size=50/>
                 </td>
             </tr>
             <tr>
